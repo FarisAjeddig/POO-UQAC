@@ -9,6 +9,7 @@ class Personne {
 		long long phoneNumber;
 		const string WORKER = "Travailleur";
 		const string UNEMPLOYED = "Sans emploi";
+		const string INTERSHIP = "Stagiaire";
 
 	public:
 		void print_name();

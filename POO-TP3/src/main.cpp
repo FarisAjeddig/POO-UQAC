@@ -13,6 +13,8 @@
 #include "Employe.cpp"
 #include "Etudiant.h"
 #include "Etudiant.cpp"
+#include "Stagiaire.h"
+#include "Stagiaire.cpp"
 
 using namespace std;
 

@@ -2,7 +2,7 @@
 #define ETUDIANTH
 #include "Personne.h"
 
-class Etudiant:public Personne {
+class Etudiant:virtual Personne{
   private:
     string school;
     string program;

@@ -2,7 +2,7 @@
 #define EMPLOYEH
 #include "Personne.h"
 
-class Employe:public Personne {
+class Employe:virtual Personne {
 	private:
     float salary;
     string position;
