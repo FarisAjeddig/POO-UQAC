@@ -26,6 +26,19 @@ void Employe::setPosition(string post){
   position = post;
 }
 
+Employe Employe::operator=(Employe tutor){
+	return *this;
+}
+
 string Employe::statut_d_emploi(){
   return Personne::WORKER;
+}
+
+void Employe::print(){
+  this->Personne::print();
+  cout << this->salary << "€, " << this->position << endl;
+}
+
+Employe::~Employe(){
+  // this->~Personne();
 }

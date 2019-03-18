@@ -26,9 +26,14 @@ void Etudiant::setProgram(string prog){
 }
 
 string Etudiant::statut_d_emploi(){
-    return Personne::WORKER;
+    return Personne::UNEMPLOYED;
+}
+
+void Etudiant::print(){
+  this->Personne::print();
+  cout << this->school << ", " << this->program << endl;
 }
 
 Etudiant::~Etudiant(){
-  cout << "Appel du destructeur pour " << this->lastName << " " << this->firstName << endl;
+  // cout << "Appel du destructeur pour " << this->lastName << " " << this->firstName << endl;
 }

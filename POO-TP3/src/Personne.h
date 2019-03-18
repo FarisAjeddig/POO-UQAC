@@ -7,11 +7,11 @@ class Personne {
 	protected:
 		string firstName, lastName, address;
 		long long phoneNumber;
+	public:
 		const string WORKER = "Travailleur";
 		const string UNEMPLOYED = "Sans emploi";
-		const string INTERSHIP = "Stagiaire";
+		// const string INTERSHIP = "Stagiaire";
 
-	public:
 		void print_name();
 		Personne();
 		Personne(string prenom, string nom, string place, long long number);
@@ -23,8 +23,9 @@ class Personne {
 		void setLastName(string lastName);
 		long long getPhoneNumber();
 		void setPhoneNumber(long long phoneNumber);
-		virtual string statut_d_emploi() = 0;//TODO : rendre cette fonction virtuelle
-		~Personne();
+		virtual string statut_d_emploi() = 0;
+		virtual void print();
+		virtual ~Personne();
 };
 
 #endif

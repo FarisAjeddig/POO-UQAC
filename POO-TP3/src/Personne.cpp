@@ -50,6 +50,10 @@ void Personne::setPhoneNumber(long long phoneNumber) {
 	this->phoneNumber = phoneNumber;
 }
 
+void Personne::print(){
+	cout << this->firstName << ", " << this->lastName << ", " << this->address << ", " << this->phoneNumber;
+}
+
 Personne::~Personne(){
-	cout << "Appel du destructeur pour " << this->lastName << " " << this->firstName << endl;
+	// cout << "Appel du destructeur pour " << this->lastName << " " << this->firstName << endl;
 }
