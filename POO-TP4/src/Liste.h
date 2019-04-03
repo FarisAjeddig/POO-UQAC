@@ -94,5 +94,5 @@ Liste<T>& Liste<T>::operator=(const Liste<T>& liste){
 // Définition de la surcharge de l'opérateur []
 template<class T>
 Liste<T>& Liste<T>::operator[](int key){
-  return elements[ key ];
+  return (this->getElements(key));
 }

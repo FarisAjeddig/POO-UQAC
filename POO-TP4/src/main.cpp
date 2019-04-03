@@ -28,10 +28,10 @@ int main() {
 	liste.printElements();
 	liste.removeElements();
 
-	int test = liste.getElements(0);
-	cout << test << endl;
+	// int test = liste.getElements(0);
+	// cout << test << endl;
 
-	// int test = liste[0];
+	int test = liste[0];
 	// cout << liste[1];
 	return 0;
 }
