@@ -4,7 +4,7 @@ template <typename T>
 
 class Liste{
 
-  private:
+  public:
      // elements est le tableau des éléments génériques de classe T.
      T *elements;
      // nbElements est le nombre d'éléments présents dans le tableau.
@@ -40,7 +40,8 @@ class Liste{
 
     // Retire le dernier élément du tableau.
     void removeElements(){
-      elements[nbElements-1] = NULL;
+      T newElement;
+      elements[nbElements-1] = newElement;
       nbElements -= 1;
     }
 
@@ -67,9 +68,9 @@ class Liste{
     // Affiche l'ensemble des éléments du tableau avec leur type. (sous la forme key : value. Type : type.)
     void printElements () {
       cout << "key" << " : " << "value. Type : type" << endl;
-         for ( int j = 0; j < nbElements; j++ ) {
-            cout << j << " : " << elements[ j ] << ". Type: " << typeid(elements[ j ]).name() << endl;
-    	   }
+      for ( int j = 0; j < nbElements; j++ ) {
+        cout << j << " : " << elements[ j ] << ". Type: " << typeid(elements[ j ]).name() << endl;
+      }
   	}
 
     // Déclaration de la surcharge de l'opérateur =
@@ -77,6 +78,12 @@ class Liste{
 
     // Déclaration de la surcharge de l'opérateur []
     Liste<T>& operator[](int key);
+
+    // Déclaration de la surcharge de l'opérateur d'affichage <<
+    std::ostream& operator<<( ostream& cout);
+    // std::ostream& operator<<( std::ostream& flux, Liste<T> const& liste );
+
+
 
     // Destructeur
     ~Liste(){}
@@ -95,4 +102,15 @@ Liste<T>& Liste<T>::operator=(const Liste<T>& liste){
 template<class T>
 Liste<T>& Liste<T>::operator[](int key){
   return (this->getElements(key));
+}
+
+// Définition de la surcharge de l'opérateur d'affichage <<
+template<class T>
+std::ostream& Liste<T>::operator<<( ostream& cout)
+{
+  cout << "key" << " : " << "value. Type : type" << endl;
+  for ( int j = 0; j < this.getNbElements(); j++ ) {
+    cout << j << " : " << this->getElements()[ j ] << ". Type: " << typeid(this->getElements()[ j ]).name() << endl;
+  }
+  return cout;
 }
